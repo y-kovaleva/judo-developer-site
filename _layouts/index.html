@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/MyFontsWebfontsKit.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav d-flex light-blue align-items-center">
+      <a href="index.html"><img src="assets/img/judo-dev-portal-logo.svg" width="302"></a>
+      <a href="https://www.judo.app/signup" class="btn btn-arrow">Sign Up</a>
+      <button class="navbar-toggler" type="button" id="hamburger" title="Toggle Navigation" aria-label="Toggle navigation">
+        <span class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <div class="account-nav-trigger"><img src="assets/img/icons/chevron.svg" class="account-chevron"><div class="account-avatar"><div class="account-avatar-text"><span class="first-name-letter"></span><span class="last-name-letter"></span></div></div></div>
+      <div class="account-nav"><div class="account-info"><p class="account-name bold dark-text"></p><p class="account-email"></p></div><a href="https://www.judo.app/profile/personal-info" target="_blank" class="account-nav-link">My Profile</a><a href="https://judo.app/login" class="account-nav-link">Go to Web App</a><a href="https://www.judo.app/logout" class="account-nav-link account-nav-link-last">Sign Out</a></div>
+    </nav>
+    <nav class="all-cats">
+      <div class="overlay">
+        <ul class="d-flex justify-center">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">iOS SDK</a></li>
+          <li><a href="#">Android SDK</a></li>
+          <li>      <a href="https://www.judo.app/signup" class="btn btn-arrow profile-link">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="main-intro">
+      <div class="container container-narrow">
+        <h1>Documentation</h1>
+        <p class="largest width-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+    <div class="container container-narrow d-flex top-level-cats">
+      <div class="column-half">
+        <a href="single-doc.html"><img src="assets/img/ios-illustration.svg" class="img-fluid" alt="iOS SDK Illustration"></a>
+        <h3 class="poppins"><a href="#">iOS SDK</a></h3>
+        <p class="larger">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <ul>
+			{% for post in site.posts %}
+			<li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+			{% endfor %}
+        </ul>
+        <hr>
+        <p class="d-flex align-items-center">
+          <span class="pill light-blue">8 Articles</span>
+          <a href="https://www.judo.app/blog/re-create-series-spotify-mobile-experience/" class="bold link-arrow link-underline">View All<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.6667 8L13.197 8.53033C13.4899 8.23744 13.4899 7.76256 13.197 7.46967L12.6667 8ZM9.19704 3.46967C8.90414 3.17678 8.42927 3.17678 8.13638 3.46967C7.84348 3.76256 7.84348 4.23744 8.13638 4.53033L9.19704 3.46967ZM8.13638 11.4697C7.84348 11.7626 7.84348 12.2374 8.13638 12.5303C8.42927 12.8232 8.90414 12.8232 9.19704 12.5303L8.13638 11.4697ZM3.33337 7.25C2.91916 7.25 2.58337 7.58579 2.58337 8C2.58337 8.41421 2.91916 8.75 3.33337 8.75V7.25ZM13.197 7.46967L9.19704 3.46967L8.13638 4.53033L12.1364 8.53033L13.197 7.46967ZM12.1364 7.46967L8.13638 11.4697L9.19704 12.5303L13.197 8.53033L12.1364 7.46967ZM12.6667 7.25H3.33337V8.75H12.6667V7.25Z" fill="currentColor"></path>
+          </svg>
+        </a>
+      </p>
+    </div>
+    <div class="column-half">
+      <a href="#"><img src="assets/img/android-illustration.svg" class="img-fluid" alt="Android SDK Illustration"></a>
+      <h3 class="poppins"><a href="#">Android SDK</a></h3>
+      <p class="larger">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <ul>
+        <li><a href="#">Installation &amp; Initialization</a></li>
+        <li><a href="#">Deep &amp; Universal Links</a></li>
+        <li><a href="#">Sync on Foregrounding</a></li>
+        <li><a href="#">Remote Notification Sync</a></li>
+      </ul>
+      <hr>
+      <p class="d-flex align-items-center">
+        <span class="pill light-blue">8 Articles</span>
+        <a href="https://www.judo.app/blog/re-create-series-spotify-mobile-experience/" class="bold link-arrow link-underline">View All<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.6667 8L13.197 8.53033C13.4899 8.23744 13.4899 7.76256 13.197 7.46967L12.6667 8ZM9.19704 3.46967C8.90414 3.17678 8.42927 3.17678 8.13638 3.46967C7.84348 3.76256 7.84348 4.23744 8.13638 4.53033L9.19704 3.46967ZM8.13638 11.4697C7.84348 11.7626 7.84348 12.2374 8.13638 12.5303C8.42927 12.8232 8.90414 12.8232 9.19704 12.5303L8.13638 11.4697ZM3.33337 7.25C2.91916 7.25 2.58337 7.58579 2.58337 8C2.58337 8.41421 2.91916 8.75 3.33337 8.75V7.25ZM13.197 7.46967L9.19704 3.46967L8.13638 4.53033L12.1364 8.53033L13.197 7.46967ZM12.1364 7.46967L8.13638 11.4697L9.19704 12.5303L13.197 8.53033L12.1364 7.46967ZM12.6667 7.25H3.33337V8.75H12.6667V7.25Z" fill="currentColor"></path>
+        </svg>
+      </a>
+    </p>
+  </div>
+</div>
+<section>
+  <div class="container  text-center">
+    <div class="dark cta-container">
+      <h2>Get Support</h2>
+      <p class="larger width-80 mx-auto">If you have questions about the Judo editor, or developer questions about SDK integration, join the community and start a conversation!</p>
+      <a href="https://forum.judo.app/" class="btn btn-arrow">Go to Judo Support Forum</a>
+    </div>
+  </div>
+</section>
+</main>
+
+{% include footer.html %}
+
+<script src="assets/js/libs/jquery-3.6.0.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
