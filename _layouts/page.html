@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title>Judo Developer Portal</title>
+  <title>{{ site.title }}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="">
@@ -16,29 +16,9 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="top-nav d-flex light-blue align-items-center">
-      <a href="index.html"><img src="/assets/img/judo-dev-portal-logo.svg" width="302"></a>
-      <a href="https://www.judo.app/signup" class="btn btn-arrow">Sign Up</a>
-      <button class="navbar-toggler" type="button" id="hamburger" title="Toggle Navigation" aria-label="Toggle navigation">
-        <span class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
-    </nav>
-    <nav class="all-cats">
-      <div class="overlay">
-        <ul class="d-flex justify-center">
-          <li><a href="#">Home</a></li>
-          <li><a href="#" class="active">iOS SDK</a></li>
-          <li><a href="#">Android SDK</a></li>
-          <li>      <a href="https://www.judo.app/signup" class="btn btn-arrow">Sign Up</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  
+{% include site-header.html %}
+
   <main>
     <section class="single-doc container container-fluid d-flex">
       <nav class="left-nav left-sidebar doc-nav">

@@ -2,7 +2,8 @@
 layout: page
 title:  "User Identification and Personalization"
 date:   2022-01-18 14:33:57 -0500
-categories: iOS
+category: iOS
+step: 5
 ---
 # User Identification and Personalization
 

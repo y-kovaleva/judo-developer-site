@@ -2,7 +2,7 @@
 layout: page
 title:  "Handling Links"
 date:   2022-01-18 14:33:57 -0500
-categories: Android
+category: Android
 ---
 # Handling Links
 
