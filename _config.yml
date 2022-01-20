@@ -37,11 +37,40 @@ plugins:
 sass:
  sass_dir: assets/sass
  
- defaults:
-   - scope:
-       path: "assets/img"
-     values:
-       image: true
+defaults:
+  -
+    scope:
+      path: "/assets/img"
+      type: "pages"
+    values:
+      image: true
+ 
+collections:
+  ios:
+    output: true
+    permalink: /ios/:name
+    layout: page
+    order:
+      - Installation-and-initialization.md
+      - Deep-and-Universal-Links.md
+      - Sync-on-Foregrounding.md
+      - Background-Fetch-Sync.md
+      - Remote-Notification-Sync.md
+      - User-Identification-and-Personalization.md
+      - Integrating-with-Analytics.md
+      - Authorizers.md
+  android:
+    output: true
+    permalink: /android/:name
+    layout: page
+    order:
+      - Installation-and-initialization.md
+      - Handling-Links.md
+      - Remote-Notification-Sync.md
+      - Background-Sync.md
+      - User-Identification-and-Personalization.md
+      - Integrating-with-Analytics.md
+      - Authorizers.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.

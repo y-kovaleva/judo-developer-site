@@ -54,8 +54,8 @@
         <h3 class="poppins"><a href="#">iOS SDK</a></h3>
         <p class="larger">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
         <ul>
-			{% for post in site.posts %}
-			<li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+			{% for page in site.ios %}
+			<li> <a href="{{ page.url }}">{{ page.title }}</a> </li>
 			{% endfor %}
         </ul>
         <hr>
@@ -72,10 +72,9 @@
       <h3 class="poppins"><a href="#">Android SDK</a></h3>
       <p class="larger">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
       <ul>
-        <li><a href="#">Installation &amp; Initialization</a></li>
-        <li><a href="#">Deep &amp; Universal Links</a></li>
-        <li><a href="#">Sync on Foregrounding</a></li>
-        <li><a href="#">Remote Notification Sync</a></li>
+			{% for page in site.android %}
+			<li> <a href="{{ page.url }}">{{ page.title }}</a> </li>
+			{% endfor %}
       </ul>
       <hr>
       <p class="d-flex align-items-center">

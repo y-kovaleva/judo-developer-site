@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Sync via iOS Background Fetch"
 date:   2022-01-18 14:33:57 -0500
 categories: iOS
