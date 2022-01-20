@@ -13,9 +13,9 @@
     <nav class="all-cats">
       <div class="overlay">
         <ul class="d-flex justify-center">
-          <li><a href="#" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-          <li><a href="#" {% if page.category == "iOS" %}class="active"{% endif %}>iOS SDK</a></li>
-          <li><a href="#" {% if page.category == "Android" %}class="active"{% endif %}>Android SDK</a></li>
+          <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+          <li><a href="/ios/installation-and-initialization" {% if page.category == "iOS" %}class="active"{% endif %}>iOS SDK</a></li>
+          <li><a href="/android/installation-and-initialization" {% if page.category == "Android" %}class="active"{% endif %}>Android SDK</a></li>
           <li><a href="https://www.judo.app/signup" class="btn btn-arrow">Sign Up</a></li>
         </ul>
       </div>
