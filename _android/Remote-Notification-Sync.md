@@ -3,6 +3,7 @@ layout: page
 title:  "Remote Notification Sync"
 date:   2022-01-18 14:33:57 -0500
 category: Android
+step: 2
 ---
 # Remote Notification Sync
 

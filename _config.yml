@@ -55,14 +55,7 @@ collections:
     output: true
     permalink: /android/:name
     layout: page
-    order:
-      - Installation-and-initialization.md
-      - Handling-Links.md
-      - Remote-Notification-Sync.md
-      - Background-Sync.md
-      - User-Identification-and-Personalization.md
-      - Integrating-with-Analytics.md
-      - Authorizers.md
+    sort_by: step
 
 # Exclude from processing.
 # The following items will not be processed, by default.

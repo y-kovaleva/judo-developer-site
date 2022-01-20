@@ -3,6 +3,7 @@ layout: page
 title:  "Installation and Initializations"
 date:   2022-01-18 14:33:57 -0500
 category: Android
+step: 0
 ---
 # Installation and Initialization
 
