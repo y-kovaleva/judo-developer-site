@@ -4,6 +4,7 @@ title:  "Installation and Initialization"
 date:   2022-01-18 14:33:57 -0500
 category: iOS
 step: 0
+toc: true
 ---
 # Installation and Initialization
 
