@@ -2,8 +2,9 @@
 layout: page
 title:  "Background Sync via WorkManager"
 date:   2022-01-18 14:33:57 -0500
-category: Android
+platform: Android
 step: 3
+pageSection: "Getting Started"
 ---
  # Background Sync via WorkManager
 

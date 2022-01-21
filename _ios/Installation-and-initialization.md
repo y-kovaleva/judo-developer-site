@@ -2,9 +2,9 @@
 layout: page
 title:  "Installation and Initialization"
 date:   2022-01-18 14:33:57 -0500
-category: iOS
+platform: iOS
 step: 0
-toc: true
+pageSection: "Getting Started"
 ---
 # Installation and Initialization
 

@@ -2,8 +2,9 @@
 layout: page
 title:  "Deep and Universal Links"
 date:   2022-01-18 14:33:57 -0500
-category: iOS
+platform: iOS
 step: 1
+pageSection: "Getting Started"
 ---
 # Deep and Universal Links
 

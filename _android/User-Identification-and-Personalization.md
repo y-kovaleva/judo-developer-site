@@ -2,8 +2,9 @@
 layout: page
 title:  "User Identification and Personalization"
 date:   2022-01-18 14:33:57 -0500
-category: Android
+platform: Android
 step: 4
+pageSection: "Customization"
 ---
 # User Identification and Personalization
 

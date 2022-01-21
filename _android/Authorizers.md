@@ -2,8 +2,9 @@
 layout: page
 title:  "API Authorizers"
 date:   2022-01-18 14:33:57 -0500
-category: Android
+platform: Android
 step: 6
+pageSection: "Customization"
 ---
 # API Authorizers
 

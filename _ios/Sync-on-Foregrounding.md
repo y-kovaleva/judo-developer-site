@@ -2,8 +2,9 @@
 layout: page
 title:  "Sync on Foregrounding"
 date:   2022-01-18 14:33:57 -0500
-category: iOS
+platform: iOS
 step: 2
+pageSection: "Getting Started"
 ---
 The next step is to set up a bit of boilerplate to have the Judo SDK opportunistically sync content to the user's device when the app is brought to the foreground.
 

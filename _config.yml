@@ -29,6 +29,25 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+tutorialSections:
+  -
+    name: "Getting Started"
+  -
+    name: "Customization"
+  -
+
+collections:
+  ios:
+    output: true
+    permalink: /ios/:name
+    layout: page
+    sort_by: step
+  android:
+    output: true
+    permalink: /android/:name
+    layout: page
+    sort_by: step
+
 # Build settings
 theme: minima
 plugins:
@@ -44,18 +63,6 @@ defaults:
       type: "pages"
     values:
       image: true
- 
-collections:
-  ios:
-    output: true
-    permalink: /ios/:name
-    layout: page
-    sort_by: step
-  android:
-    output: true
-    permalink: /android/:name
-    layout: page
-    sort_by: step
 
 # Exclude from processing.
 # The following items will not be processed, by default.
