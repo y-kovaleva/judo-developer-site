@@ -1,36 +1,27 @@
 <!doctype html>
 <html class="no-js" lang="">
 {% include header.html %}
-<body>
-  
-{% include site-header.html %}
-
+<body>  
+  {% include site-header.html %}
   <main>
     <section class="single-doc container container-fluid d-flex">
-      
       {% include left-sidebar.html %}
-      
       <article class="doc-content">
         <section class="doc-main">
           <div class="center-content">
             <div class="doc-text">
-				{{ content | markdownify }}
-      </div>
+              {{ content }}
+              {% include single-doc-nav.html %}
+            </div>
           </div>
-          
           {% include right-sidebar.html %}
-          
-      </section>
-    </article>
-  </section>
-
-  {% include community-box.html %}
-
-</main>
-
-{% include footer.html %}
-
-<script src="/assets/js/libs/jquery-3.6.0.min.js"></script>
-<script src="/assets/js/scripts.js"></script>
+        </section>
+      </article>
+    </section>
+    {% include community-box.html %}
+  </main>
+  {% include footer.html %}
+  <script src="/assets/js/libs/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/scripts.js"></script>
 </body>
 </html>

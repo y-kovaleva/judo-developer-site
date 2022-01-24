@@ -1,10 +1,16 @@
 <nav class="left-nav left-sidebar doc-nav">
   <p class="dark-text boldest nav-title">Overview</p>
   <div class="nav-container">
+    {% case page.platform %}
+      {% when "iOS" %}
+        {% assign platform = site.ios %}
+      {% when "Android" %}
+        {% assign platform = site.android %}
+    {% endcase %}
     {% for currSection in site.tutorialSections %}
     <p class="parent-cat">{{ currSection.name }}</p>
     <ul class="children-cats">
-      {% assign filtered_page = site.ios | where_exp: "item", "item.pageSection == currSection.name" %}
+      {% assign filtered_page = platform | where_exp: "item", "item.pageSection == currSection.name" %}
       {% for currPage in filtered_page %}
       <li><a href="{{ currPage.url }}" {% if page.title == currPage.title %}class="is-active"{% endif %}>{{ currPage.title }}</a></li>
       {% endfor %}
