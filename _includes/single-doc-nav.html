@@ -1,6 +1,6 @@
 {% if page.next != nil %}
 <div class="single-doc-nav">
-  <a href="{{ page.next.url }}" class="nav-next">
+  <a href="{{ page.next.url | relative_url }}" class="nav-next">
     <div>
       <div class="smallest sinle-nav-btn-text">Next Article:</div>
       <h3>{{ page.next.title }}</h3>

@@ -1,24 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="">
-<head>
-  <meta charset="utf-8">
-  <title>{{ site.title }}</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <link rel="shortcut icon" href="assets/img/favicon.png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/assets/css/MyFontsWebfontsKit.css">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  
-{% include site-header.html %}
-
+{% include header.html %}
+<body>  
+  {% include site-header.html %}
   <main>
     <section class="main-intro">
       <div class="container container-narrow">
@@ -33,7 +17,7 @@
         <p class="larger">Learn how to seamlessly integrate the Judo SDK for iOS into your app.</p>
         <ul>
 			{% for page in site.ios %}
-			<li> <a href="{{ page.url }}">{{ page.title }}</a> </li>
+			<li> <a href="{{ page.url | relative_url }}">{{ page.title }}</a> </li>
 			{% endfor %}
         </ul>
         <hr>
@@ -51,7 +35,7 @@
       <p class="larger">Learn how to seamlessly integrate the Judo SDK for Android into your app.</p>
       <ul>
 			{% for page in site.android %}
-			<li> <a href="{{ page.url }}">{{ page.title }}</a> </li>
+			<li> <a href="{{ page.url | relative_url }}">{{ page.title }}</a> </li>
 			{% endfor %}
       </ul>
       <hr>
@@ -64,14 +48,10 @@
     </p>
   </div>
 </div>
-
 {% include community-box.html %}
-
 </main>
-
 {% include footer.html %}
-
-<script src="assets/js/libs/jquery-3.6.0.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+<script src="{{ site.baseurl }}/assets/js/libs/jquery-3.6.0.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 </body>
 </html>

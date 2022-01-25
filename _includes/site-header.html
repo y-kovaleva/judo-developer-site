@@ -1,6 +1,6 @@
 <header class="site-header">
   <nav class="top-nav d-flex light-blue align-items-center">
-    <a href="/"><img src="/assets/img/judo-dev-portal-logo.svg" width="302"></a>
+    <a href="/"><img src="{{ '/assets/img/judo-dev-portal-logo.svg' | relative_url }}" width="302"></a>
     <a href="https://www.judo.app/signup" class="btn btn-arrow">Get Started</a>
     <button class="navbar-toggler" type="button" id="hamburger" title="Toggle Navigation" aria-label="Toggle navigation">
       <span class="menu-toggle">
@@ -13,9 +13,9 @@
   <nav class="all-cats">
     <div class="overlay">
       <ul class="d-flex justify-center">
-        <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-        <li><a href="/ios/installation-and-initialization" {% if page.platform == "iOS" %}class="active"{% endif %}>iOS SDK</a></li>
-        <li><a href="/android/installation-and-initialization" {% if page.platform == "Android" %}class="active"{% endif %}>Android SDK</a></li>
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ 'ios/installation-and-initialization' | relative_url }}" {% if page.platform == "iOS" %}class="active"{% endif %}>iOS SDK</a></li>
+        <li><a href="{{ 'android/installation-and-initialization' | relative_url }}" {% if page.platform == "Android" %}class="active"{% endif %}>Android SDK</a></li>
         <li><a href="https://www.judo.app/signup" class="btn btn-arrow">Get Started</a></li>
       </ul>
     </div>
