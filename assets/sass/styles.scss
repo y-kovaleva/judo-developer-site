@@ -1,3 +1,6 @@
+---
+---
+
 $font-regular: 400 16px 'Poppins', sans-serif;
 $font-color: #676487;
 $accent-color-bright: #9D2BD8;
@@ -808,10 +811,11 @@ $sidebar_width: 280px;
     word-wrap: break-word;
     background: #F4F4F9 !important;
     color: $black;
+    line-height: 150%;
     pre {
       padding: 1rem;
       @media screen and (max-width: 1919px){
-        white-space: pre-line;
+        white-space: pre;
       }
     }
     @media screen and (max-width: 1919px){

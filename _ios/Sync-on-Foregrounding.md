@@ -29,7 +29,3 @@ func applicationDidBecomeActive(_ application: UIApplication) {
     Judo.sharedInstance.performSync()
 }
 ```
-
----
-
-Continue to [Setting up Remote Notification Sync](Remote-Notification-Sync).
