@@ -12,8 +12,8 @@
     </section>
     <div class="container container-narrow d-flex top-level-cats">
       <div class="column-half">
-        <a href="single-doc.html"><img src="assets/img/ios-illustration.svg" class="img-fluid" alt="iOS SDK Illustration"></a>
-        <h3 class="poppins"><a href="#">iOS SDK</a></h3>
+        <a href="{{ site.ios.first.url | relative_url }}"><img src="{{ 'assets/img/ios-illustration.svg' | relative_url }}" class="img-fluid" alt="iOS SDK Illustration"></a>
+        <h3 class="poppins"><a href="{{ site.ios.first.url | relative_url }}">iOS SDK</a></h3>
         <p class="larger">Learn how to seamlessly integrate the Judo SDK for iOS into your app.</p>
         <ul>
 			{% for page in site.ios %}
@@ -23,15 +23,15 @@
         <hr>
         <p class="d-flex align-items-center">
           <span class="pill light-blue">{{ site.ios.size }} Articles</span>
-          <a href="https://www.judo.app/blog/re-create-series-spotify-mobile-experience/" class="bold link-arrow link-underline">View All<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="{{ site.ios.first.url | relative_url }}" class="bold link-arrow link-underline">View All<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.6667 8L13.197 8.53033C13.4899 8.23744 13.4899 7.76256 13.197 7.46967L12.6667 8ZM9.19704 3.46967C8.90414 3.17678 8.42927 3.17678 8.13638 3.46967C7.84348 3.76256 7.84348 4.23744 8.13638 4.53033L9.19704 3.46967ZM8.13638 11.4697C7.84348 11.7626 7.84348 12.2374 8.13638 12.5303C8.42927 12.8232 8.90414 12.8232 9.19704 12.5303L8.13638 11.4697ZM3.33337 7.25C2.91916 7.25 2.58337 7.58579 2.58337 8C2.58337 8.41421 2.91916 8.75 3.33337 8.75V7.25ZM13.197 7.46967L9.19704 3.46967L8.13638 4.53033L12.1364 8.53033L13.197 7.46967ZM12.1364 7.46967L8.13638 11.4697L9.19704 12.5303L13.197 8.53033L12.1364 7.46967ZM12.6667 7.25H3.33337V8.75H12.6667V7.25Z" fill="currentColor"></path>
           </svg>
         </a>
       </p>
     </div>
     <div class="column-half">
-      <a href="#"><img src="assets/img/android-illustration.svg" class="img-fluid" alt="Android SDK Illustration"></a>
-      <h3 class="poppins"><a href="#">Android SDK</a></h3>
+      <a href="{{ site.android.first.url | relative_url }}"><img src="{{ 'assets/img/android-illustration.svg' | relative_url }}" class="img-fluid" alt="Android SDK Illustration"></a>
+      <h3 class="poppins"><a href="{{ site.android.first.url | relative_url }}">Android SDK</a></h3>
       <p class="larger">Learn how to seamlessly integrate the Judo SDK for Android into your app.</p>
       <ul>
 			{% for page in site.android %}
@@ -41,7 +41,7 @@
       <hr>
       <p class="d-flex align-items-center">
         <span class="pill light-blue">{{ site.android.size }} Articles</span>
-        <a href="https://www.judo.app/blog/re-create-series-spotify-mobile-experience/" class="bold link-arrow link-underline">View All<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="{{ site.android.first.url | relative_url }}" class="bold link-arrow link-underline">View All<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.6667 8L13.197 8.53033C13.4899 8.23744 13.4899 7.76256 13.197 7.46967L12.6667 8ZM9.19704 3.46967C8.90414 3.17678 8.42927 3.17678 8.13638 3.46967C7.84348 3.76256 7.84348 4.23744 8.13638 4.53033L9.19704 3.46967ZM8.13638 11.4697C7.84348 11.7626 7.84348 12.2374 8.13638 12.5303C8.42927 12.8232 8.90414 12.8232 9.19704 12.5303L8.13638 11.4697ZM3.33337 7.25C2.91916 7.25 2.58337 7.58579 2.58337 8C2.58337 8.41421 2.91916 8.75 3.33337 8.75V7.25ZM13.197 7.46967L9.19704 3.46967L8.13638 4.53033L12.1364 8.53033L13.197 7.46967ZM12.1364 7.46967L8.13638 11.4697L9.19704 12.5303L13.197 8.53033L12.1364 7.46967ZM12.6667 7.25H3.33337V8.75H12.6667V7.25Z" fill="currentColor"></path>
         </svg>
       </a>
@@ -51,7 +51,7 @@
 {% include community-box.html %}
 </main>
 {% include footer.html %}
-<script src="{{ site.baseurl }}/assets/js/libs/jquery-3.6.0.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+<script src="{{ 'assets/js/libs/jquery-3.6.0.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/js/scripts.js' | relative_url }}"></script>
 </body>
 </html>
