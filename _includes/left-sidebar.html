@@ -10,7 +10,7 @@
     {% for currSection in site.tutorialSections %}
     <p class="parent-cat">{{ currSection.name }}</p>
     <ul class="children-cats">
-      {% assign filtered_page = platform | where_exp: "item", "item.pageSection == currSection.name" %}
+      {% assign filtered_page = platform | where_exp: "item", "item.pageSection == currSection.name" | sort:"step" %}
       {% for currPage in filtered_page %}
       <li><a href="{{ currPage.url | relative_url }}" {% if page.title == currPage.title %}class="is-active"{% endif %}>{{ currPage.title }}</a></li>
       {% endfor %}

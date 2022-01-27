@@ -38,12 +38,10 @@ collections:
     output: true
     permalink: /ios/:name
     layout: page
-    sort_by: step
   android:
     output: true
     permalink: /android/:name
     layout: page
-    sort_by: step
 
 # Build settings
 theme: minima
