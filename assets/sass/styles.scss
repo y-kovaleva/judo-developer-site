@@ -769,6 +769,12 @@ img {
     top: 0;
   }
 }
+
+.left-sidebar {
+  a, a:visited, a:active {
+    color: inherit;
+  }
+}
 .center-content {
   max-width: 1170px;
 }
