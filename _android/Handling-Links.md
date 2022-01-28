@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Handling Links"
-date:   2022-01-18 14:33:57 -0500
 platform: Android
 step: 1
 pageSection: "Getting Started"
@@ -72,7 +71,3 @@ Then add `android:autoVerify="true"` to any one of your Intent filters. Note tha
 [Android Developer Documentation - Handling Android App Links](https://developer.android.com/training/app-links)
 
 [Android Developer Documentation - Verify Android App Links](https://developer.android.com/training/app-links/verify-site-associations)
-
----
-
-Continue to [Setting up Remote Notification Sync](Remote-Notification-Sync).

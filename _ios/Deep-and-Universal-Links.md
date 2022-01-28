@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Deep and Universal Links"
-date:   2022-01-18 14:33:57 -0500
 platform: iOS
 step: 1
 pageSection: "Getting Started"
@@ -29,14 +28,14 @@ Continue below for setting up these handlers using the standard iOS infrastructu
 1. Add (or ensure you already have) the Associated Domain entitlement;
 2. In the Associated Domains list, add your Judo domain you received from Judo (using the `applinks` prefix).
 
-![Associated Domains Config](images/associated-domains-config.png)
+![Associated Domains Config]({{'assets/img/associated-domains-config.png' | relative_url }})
 
 **Note**: the server-side configuration is handled for you by the Judo server.
 #### Deep Links Setup
 
 Add (or ensure you already have) the URL type for the deep link scheme you selected (note that you did not receive this scheme from Judo; this is up to you):
 
-![URL Types Config](images/url-types-config.png)
+![URL Types Config]({{ 'assets/img/url-types-config.png' | relative_url }})
 
 ## Routing Inbound Links to the Judo SDK
 
@@ -98,7 +97,3 @@ For Universal Links:
 For Deep Links:
 
 [Apple Developer - Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
-
----
-
-Continue to [Sync On Foregrounding](Sync-on-Foregrounding).

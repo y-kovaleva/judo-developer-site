@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "API Authorizers"
-date:   2022-01-18 14:33:57 -0500
 platform: iOS
 step: 7
 pageSection: "Customization"

@@ -1,9 +1,18 @@
-{% if page.next != nil %}
+{% case page.platform %}
+  {% when "iOS" %}
+    {% assign platform = site.ios %}
+  {% when "Android" %}
+    {% assign platform = site.android %}
+{% endcase %}
+{% assign ordered_pages = platform | sort: "step" %}
+{% assign nextIndex = page.step | plus: 1 %}
+{% if nextIndex < ordered_pages.size %}
+  {% assign next_page = ordered_pages[nextIndex] %}
 <div class="single-doc-nav">
-  <a href="{{ page.next.url | relative_url }}" class="nav-next">
+  <a href="{{ next_page.url | relative_url }}" class="nav-next">
     <div>
       <div class="smallest sinle-nav-btn-text">Next Article:</div>
-      <h3>{{ page.next.title }}</h3>
+      <h3>{{ next_page.title }}</h3>
     </div>
     <div class="prev-nav-arrows arrow-next">
       <div class="circle-arrow">
@@ -14,3 +23,4 @@
   </a>
 </div>
 {% endif %}
+

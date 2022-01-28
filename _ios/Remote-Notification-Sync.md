@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Remote Notification Sync"
-date:   2022-01-18 14:33:57 -0500
 platform: iOS
 step: 3
 pageSection: "Getting Started"
@@ -46,7 +45,3 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
     os_log("Failed to register for remote notifications, because: %@", type: .debug, error.localizedDescription)
 }
 ```
-
----
-
-Continue to [Background Fetch Sync](Background-Fetch-Sync).

@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Remote Notification Sync"
-date:   2022-01-18 14:33:57 -0500
 platform: Android
 step: 2
 pageSection: "Getting Started"
@@ -46,7 +45,3 @@ override fun onMessageReceived(p0: RemoteMessage) {
 
 }
 ```
-
----
-
-Continue to [Background Sync via WorkManager](Background-Sync).

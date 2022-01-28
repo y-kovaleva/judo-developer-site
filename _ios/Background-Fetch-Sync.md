@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Sync via iOS Background Fetch"
-date:   2022-01-18 14:33:57 -0500
 platform: iOS
 step: 4
 pageSection: "Getting Started"
@@ -14,7 +13,7 @@ pageSection: "Getting Started"
 
  In the "Signing and Capabilities" in your Target, you need to select the "Background fetch" under Background Modes:
 
- ![Background Modes Editor](/assets/img/background-fetch-capability.png)
+ ![Background Modes Editor]({{ 'assets/img/background-fetch-capability.png' | relative_url }})
 
 ## Add Permitted Identifier
 
@@ -24,7 +23,7 @@ pageSection: "Getting Started"
  
  Select an identifiable string for it - we recommend `app.judo.background.refresh` - and add it to the Array. You can either use Xcode's plist editor directly, or "Custom iOS Target Properties" in the Info section of the Target settings.
 
-![Background Fetch Permitted Identifier in Info.plist](/assets/img/background-fetch-permitted-identifier.png)
+![Background Fetch Permitted Identifier in Info.plist]({{ 'assets/img/background-fetch-permitted-identifier.png' | relative_url }})
 
 ## Register Task
 

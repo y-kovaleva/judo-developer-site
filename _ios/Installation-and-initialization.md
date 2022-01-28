@@ -49,8 +49,3 @@ If the `JUDO_VERBOSE` environment variable is set to 1 (you can do so in your Ta
 ## Getting Help
 
 See the [Judo Forum](https://forum.judo.app/c/sdk-integration).
-
----
-
-Continue to [Deep and Universal Links](Deep-and-Universal-Links).
-

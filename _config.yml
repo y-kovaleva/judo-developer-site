@@ -56,8 +56,7 @@ sass:
 defaults:
   -
     scope:
-      path: "/assets/img"
-      type: "pages"
+      path: "assets/img"
     values:
       image: true
 
