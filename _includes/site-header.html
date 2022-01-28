@@ -1,7 +1,7 @@
 <header class="site-header">
   <nav class="top-nav d-flex light-blue align-items-center">
     <a href="{{ '/' | relative_url }}"><img src="{{ 'assets/img/judo-dev-portal-logo.svg' | relative_url }}" width="302"></a>
-    <a href="https://www.judo.app/signup" class="btn btn-arrow">Get Started</a>
+    <a href="https://www.judo.app/signup" class="btn btn-arrow">Sign Up</a>
     <button class="navbar-toggler" type="button" id="hamburger" title="Toggle Navigation" aria-label="Toggle navigation">
       <span class="menu-toggle">
         <span></span>
@@ -9,6 +9,24 @@
         <span></span>
       </span>
     </button>
+    <div class="account-nav-trigger">
+      <img src="{{ 'assets/img/icons/chevron.svg' | relative_url }}" class="account-chevron">
+      <div class="account-avatar">
+        <div class="account-avatar-text">
+          <span class="first-name-letter"></span>
+          <span class="last-name-letter"></span>
+        </div>
+      </div>
+    </div>
+    <div class="account-nav">
+      <div class="account-info">
+        <p class="account-name bold dark-text"></p>
+        <p class="account-email"></p>
+      </div>
+      <a href="https://www.judo.app/profile/personal-info" target="_blank" class="account-nav-link">My Profile</a>
+      <a href="https://judo.app/login" class="account-nav-link">Go to Web App</a>
+      <a href="https://www.judo.app/logout" class="account-nav-link account-nav-link-last">Sign Out</a>
+    </div>
   </nav>
   <nav class="all-cats">
     <div class="overlay">
