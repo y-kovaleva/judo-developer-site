@@ -51,6 +51,7 @@ plugins:
   
 sass:
  sass_dir: assets/sass
+ style: compressed
  
 defaults:
   -

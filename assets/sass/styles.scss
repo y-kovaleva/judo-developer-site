@@ -1,5 +1,6 @@
 ---
 ---
+@import "../css/github.css";
 
 $font-regular: 400 16px 'Poppins', sans-serif;
 $font-color: #676487;
@@ -804,8 +805,10 @@ $sidebar_width: 280px;
     @extend .poppins;
     font-size:1.1em;
   }
-  .highlight {
+  .highlighter-rouge {
     margin-bottom: 3rem;
+  }
+  .highlight {
     overflow-x: scroll;
     border-radius: $rounded-corner;
     word-wrap: break-word;
@@ -814,9 +817,7 @@ $sidebar_width: 280px;
     line-height: 150%;
     pre {
       padding: 1rem;
-      @media screen and (max-width: 1919px){
-        white-space: pre;
-      }
+      white-space: pre-wrap;
     }
     @media screen and (max-width: 1919px){
       overflow-x:auto;
