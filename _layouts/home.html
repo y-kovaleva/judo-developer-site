@@ -32,7 +32,7 @@
     </div>
     <div class="column-half">
       {% assign ordered_android_pages = site.android | sort:"step" %}
-      <a href="{{ sordered_android_pages.first.url | relative_url }}"><img src="{{ 'assets/img/android-illustration.svg' | relative_url }}" class="img-fluid" alt="Android SDK Illustration"></a>
+      <a href="{{ ordered_android_pages.first.url | relative_url }}"><img src="{{ 'assets/img/android-illustration.svg' | relative_url }}" class="img-fluid" alt="Android SDK Illustration"></a>
       <h3 class="poppins"><a href="{{ ordered_android_pages.first.url | relative_url }}">Android SDK</a></h3>
       <p class="larger">Learn how to seamlessly integrate the Judo SDK for Android into your app.</p>
       <ul>
