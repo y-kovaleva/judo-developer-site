@@ -35,4 +35,4 @@ Judo.sharedInstance.registerAppRefreshTask(taskIdentifier: "app.judo.background.
 
 ---
 
-You've completed the initial integration!  However, other optional steps remain for for more advanced features, namely [User Identification and Personalization](User-Identification-and-Personalization), handling both [Integrating with Analytics](Integrating-with-Analytics).
+You've completed the initial integration!  However, other optional steps remain for for more advanced features, namely [User Identification and Personalization](user-identification-and-personalization), handling both [Integrating with Analytics](integrating-with-analytics).
