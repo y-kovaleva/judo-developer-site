@@ -5,6 +5,8 @@ platform: iOS
 step: 6
 pageSection: "Customization"
 ---
+<section id="integrating-with-analytics">
+{% capture text %}
 # Integrating with Analytics
 
 The Judo SDK a notification you can subscribe to, 'Screen Viewed'. This is primarily useful for integrating with your own (or second-party) analytics tooling separate from Judo's own analytics features.
@@ -12,7 +14,11 @@ The Judo SDK a notification you can subscribe to, 'Screen Viewed'. This is prima
 The Judo SDK broadcasts it onto iOS' Notification Center, with references to the SDK's model objects, and also references to the SDK's view controllers.
 
 For more information about the Notification Center, see the [Apple Documentation](https://developer.apple.com/documentation/foundation/notificationcenter).
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="screen-viewed-notification">
+{% capture text %}
 ## Screen Viewed Notification
 
 The Screen Viewed notification is emitted from whenever an Experience Screen is presented or navigated to.
@@ -65,4 +71,6 @@ judoObserverChit = NotificationCenter.default.addObserver(
     }
 )
 ```
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>

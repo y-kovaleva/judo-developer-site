@@ -5,12 +5,18 @@ platform: Android
 step: 3
 pageSection: "Getting Started"
 ---
+<section id="background-sync-via-workmanager">
+{% capture text %}
 # Background Sync via WorkManager
 
 Google's [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager) library is the typical means that Android developers schedule and manage background tasks in a way that is compatible with a wide range of Android versions.
 
 Here we provide some boilerplate for setting up a WorkManager job to run Judo's sync opportunistically in the background.
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="add-workmanager-dependency">
+{% capture text %}
 ## Add WorkManager Dependency
 
 Add the following the `dependencies` block in your build.gradle:
@@ -26,7 +32,11 @@ Kotlin KTS:
 ```kotlin
 implementation("androidx.work:work-runtime:2.5.0")
 ```
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="define-worker">
+{% capture text %}
 ## Define Worker
 
 Create a `PeriodicWorkRequest` that runs the Judo SDK's sync:
@@ -82,3 +92,6 @@ WorkManager.getInstance(this).enqueueUniquePeriodicWork("judo-sync", ExistingPer
 ---
 
 You've completed the initial integration!  However, other optional steps remain for for more advanced features, namely [User Identification and Personalization](user-identification-and-personalization), handling both [Integrating with Analytics](integrating-with-analytics).
+{% endcapture %}
+{{ text | markdownify }}
+</section>

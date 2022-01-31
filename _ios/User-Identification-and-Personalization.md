@@ -5,10 +5,16 @@ platform: iOS
 step: 5
 pageSection: "Customization"
 ---
+<section id="user-identification-and-personalization">
+{% capture text %}
 # User Identification and Personalization
 
 You can identify your current user to Judo to enable personalization (of text copy and dynamic URLs on Actions, Images, WebViews, etc.) and also associate and attribute them in Judo's analytics.
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="identifying-a-user-and-setting-traits">
+{% capture text %}
 ## Identifying a User and setting Traits
 
 On the `Judo.sharedInstance` singleton, there is an `identify()` method you can call with an optional `userID` and a `traits`.
@@ -42,7 +48,11 @@ Judo.sharedInstance.identify(
 ```
 
 This information is persisted across app restarts, but naturally we recommend calling it every time your user data changes (such as logging in, logging out, profile updates, etc).  Duplicate Identify events, provided they are not called to excess, are fine. Calling it every app start is a good idea, which will particularly help with the case where the user was previously logged in before you ship an update which includes the Judo integration.
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="usage-within-an-experience">
+{% capture text %}
 ## Usage within an Experience
 
 The designer can then consume these values in several different ways using Judo's interpolation syntax, prefixed with `user.`. In a text field, they can use something like the following in a Text layer:
@@ -54,7 +64,14 @@ And a URL in an Image layer might be something like:
     http://myapi.example.com/v1/users/{{ user.id }}/avatar.jpg
 
 NB. The `userID` you provided to Identify is mixed into the userInfo data as `userID` and is also available. If you set a value named `userID` in traits directly (not recommended), it will be shadowed.
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="resetting-user-datalogging-out">
+{% capture text %}
 ## Resetting User Data/Logging Out
 
 Call `Judo.sharedInstance.reset()` to clear the User ID, traits, and cycle the Anonymous ID.
+{% endcapture %}
+{{ text | markdownify }}
+</section>

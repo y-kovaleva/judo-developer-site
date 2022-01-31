@@ -5,6 +5,8 @@ platform: iOS
 step: 1
 pageSection: "Getting Started"
 ---
+<section id="deep-and-universal-links">
+{% capture text %}
 # Deep and Universal Links
 
 Experiences are hosted at and ultimately identifiable by a web link (a URL), sometimes referred to as universal links or app links, with associated domains. Such links are fully qualified web URLs with `https` schemes.
@@ -13,6 +15,11 @@ Judo can also be used with deep links, which are links with a custom scheme (a U
 
 As such, we support opening Judo Experience links with both `http` and `https` links as well as any custom URI scheme that you define (internally, we simply replace any scheme given to Judo `openURL` method with `https`).
 
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="general-setup">
+{% capture text %}
 ## General Setup
 
 You will have received a Judo universal link domain from us when setting up your account (such as `myapp.judo.app`, which will be used below as an example). You will need to set up your app to open such links, and then use `Judo.sharedInstance.openURL` to handle opening it.
@@ -28,7 +35,7 @@ Continue below for setting up these handlers using the standard iOS infrastructu
 1. Add (or ensure you already have) the Associated Domain entitlement;
 2. In the Associated Domains list, add your Judo domain you received from Judo (using the `applinks` prefix).
 
-![Associated Domains Config]({{'assets/img/associated-domains-config.png' | relative_url }})
+![Associated Domains Config]({{ 'assets/img/associated-domains-config.png' | relative_url }})
 
 **Note**: the server-side configuration is handled for you by the Judo server.
 #### Deep Links Setup
@@ -37,6 +44,11 @@ Add (or ensure you already have) the URL type for the deep link scheme you selec
 
 ![URL Types Config]({{ 'assets/img/url-types-config.png' | relative_url }})
 
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="routing-inbound-links-to-the-judo-sdk">
+{% capture text %}
 ## Routing Inbound Links to the Judo SDK
 
 At this stage, all that remains is to open the URIs with Judo.  Judo provides an `openURL()` helper that makes this easy. If Judo determines (by matching the domain name component of the URI) that the link is a Judo link, `openURL()` returns true and the Experience is opened.
@@ -88,6 +100,11 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 }
 ```
 
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="further-reading">
+{% capture text %}
 ## Further Reading
 
 For Universal Links:
@@ -97,3 +114,7 @@ For Universal Links:
 For Deep Links:
 
 [Apple Developer - Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
+
+{% endcapture %}
+{{ text | markdownify }}
+</section>

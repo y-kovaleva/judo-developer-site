@@ -5,12 +5,18 @@ platform: Android
 step: 5
 pageSection: "Customization"
 ---
+<section id="integrating-with-analytics">
+{% capture text %}
 # Integrating with Analytics
 
 The Judo SDK a notification you can subscribe to, 'Screen Viewed'. This is primarily useful for integrating with your own (or second-party) analytics tooling separate from Judo's own analytics features.
 
 The Judo SDK offers it as a callback, with references to the SDK's model objects, and also references to the SDK's view controllers.
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>
+<section id="screen-viewed-callback">
+{% capture text %}
 ## Screen Viewed Callback
 
 The Screen Viewed callback is invoked whenever an Experience Screen is presented or navigated to.
@@ -61,4 +67,6 @@ Judo.addScreenViewedCallback { event ->
     }
 }
 ```
-
+{% endcapture %}
+{{ text | markdownify }}
+</section>

@@ -788,6 +788,7 @@ $sidebar_width: 280px;
   }
   section {
     padding: 0;
+    margin-bottom: 3em;
   }
   h1 {
     font-size: 2.375em;
@@ -863,7 +864,7 @@ $sidebar_width: 280px;
       width: $sidebar_width;
     }
   }
-  .doc-nav {
+  .nav-appearance {
     font-size: 14px;
     a {
       color: $font-color;

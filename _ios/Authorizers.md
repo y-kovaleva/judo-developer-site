@@ -5,6 +5,8 @@ platform: iOS
 step: 7
 pageSection: "Customization"
 ---
+<section id="api-authorizers">
+{% capture text %}
 # API Authorizers
 
 When integrating one of your own Web APIs with Judo as a Data Source, it is usually the case that you need to pass an API key along.  The Judo SDK gives you a means to modify any outgoing Data Source Web API URLRequest being issued by the Judo SDK for your API.
@@ -18,3 +20,6 @@ configuration.authorize("*.example.com", with: { request in
     request.setValue("xxx", forHTTPHeaderField: "Example-Token")
 })
 ```
+{% endcapture %}
+{{ text | markdownify }}
+</section>
