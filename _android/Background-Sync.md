@@ -1,12 +1,11 @@
 ---
 layout: page
 title:  "Background Sync via WorkManager"
-date:   2022-01-18 14:33:57 -0500
 platform: Android
 step: 3
 pageSection: "Getting Started"
 ---
- # Background Sync via WorkManager
+# Background Sync via WorkManager
 
 Google's [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager) library is the typical means that Android developers schedule and manage background tasks in a way that is compatible with a wide range of Android versions.
 
@@ -82,4 +81,4 @@ WorkManager.getInstance(this).enqueueUniquePeriodicWork("judo-sync", ExistingPer
 
 ---
 
-You've completed the initial integration!  However, other optional steps remain for for more advanced features, namely [User Identification and Personalization](User-Identification-and-Personalization), handling both [Integrating with Analytics](Integrating-with-Analytics).
+You've completed the initial integration!  However, other optional steps remain for for more advanced features, namely [User Identification and Personalization](user-identification-and-personalization), handling both [Integrating with Analytics](integrating-with-analytics).
