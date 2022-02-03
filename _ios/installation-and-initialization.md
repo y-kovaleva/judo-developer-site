@@ -6,8 +6,7 @@ platform: iOS
 step: 0
 pageSection: "Getting Started"
 ---
-<section id="installation-and-initialization">
-{% capture text %}  
+<section id="{{page.title | slugify }}" markdown=1>
 # Installation and Initialization
 
 The Judo SDK allows you to present Experiences in your iOS mobile app. It supports using push-driven automatic sync in order to ensure that Experiences are available instantly (and when offline).
@@ -17,11 +16,8 @@ While the SDK may be linked with apps that have a target (minimum iOS SDK API le
 You need your app's Judo Access Token (found at the [Judo web interface](https://www.judo.app/login)).  You will need to configure (if your team has not done so already) an iOS app in the Judo settings. Once you have done so, there you will find the app's Access Token.
 
 You will also a Domain configured in the Judo settings as well. These domains are subdomains within the `.judo.app` top-level domain.
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="install-the-sdk">
-{% capture text %}
+<section id="install-the-sdk" markdown=1>
 ## Install the SDK
 
 The recommended way to install the Judo SDK is with SwiftPM.
@@ -35,11 +31,8 @@ In this next prompt, you will be able to choose the default SwiftPM update polic
 It will prompt you to select which Judo products to add to your app target.  Make sure you select both JudoModel and JudoSDK, and press Next.
 
 Once you have completed the SwiftPM installation flow, the SDK has been installed, and what remains now to is to complete configuring and integrating it.
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="initialize-the-sdk">
-{% capture text %}
+<section id="initialize-the-sdk" markdown=1>
 ## Initialize the SDK
 
 For the next steps you will need your Access Token (discussed above) and an App Domain. Note that Judo supports multiple domains.
@@ -51,22 +44,14 @@ In your AppDelegate's `didFinishLaunchingWithOptions` template method, add the f
 Judo.initialize(accessToken: "<ACCESS TOKEN HERE>", domain: "<APP-DOMAIN-HERE>")
 // Request that Judo perform a sync on start. This is asynchronous, and in the event of no pending updates will consist of only a small, single HTTP request.
 ```
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="troubleshooting">
-{% capture text %}
+<section id="troubleshooting" markdown=1>
 ## Troubleshooting
 
 If the `JUDO_VERBOSE` environment variable is set to 1 (you can do so in your Target's Scheme in Xcode), the Judo SDK will log additional information about its behaviour.
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="getting-help">
-{% capture text %}
+<section id="getting-help" markdown=1>
 ## Getting Help
 
 See the [Judo Forum](https://forum.judo.app/c/sdk-integration).
-{% endcapture %}
-{{ text | markdownify }}
 </section>

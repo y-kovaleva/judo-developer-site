@@ -5,8 +5,7 @@ platform: Android
 step: 6
 pageSection: "Customization"
 ---
-<section id="api-authorizers">
-{% capture text %}
+<section id="{{ page.title | slugify }}" markdown=1>
 # API Authorizers
 
 When integrating one of your own Web APIs with Judo as a Data Source, it is usually the case that you need to pass an API key along.  The Judo SDK gives you a means to modify any outgoing Data Source Web API URLRequest being issued by the Judo SDK for your API.
@@ -30,6 +29,4 @@ Judo.initialize(
     configuration = config.build()
 )
 ```
-{% endcapture %}
-{{ text | markdownify }}
 </section>

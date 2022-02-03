@@ -5,8 +5,7 @@ platform: Android
 step: 1
 pageSection: "Getting Started"
 ---
-<section id="handling-links">
-{% capture text %}
+<section id="{{ page.title | slugify }}" markdown=1>
 # Handling Links
 
 Experiences are hosted at and ultimately identifiable by a web link (a URL), sometimes referred to as universal links or app links, with associated domains. Such links are fully qualified web URLs with `https` schemes.
@@ -14,11 +13,8 @@ Experiences are hosted at and ultimately identifiable by a web link (a URL), som
 Judo can also be used with deep links, which are links with a custom scheme (a URI), and are not web links.  They are usually used for routing the user between different areas within the app, with less friction than might be involved with web links (avoiding prompts to the user open the web browser), such as for in-app CMSes and push notifications.
 
 As such, we support opening Judo Experience links with both `http` and `https` links as well as a custom scheme that you define.
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="general-setup">
-{% capture text %}
+<section id="general-setup" markdown=1>
 ## General Setup
 
 You will have received a Judo universal link domain from us when setting up your account (such as `myapp.judo.app`, which will be used below as an example).
@@ -70,17 +66,11 @@ The Judo cloud service directly generates and hosts the `.well-known/assetlinks.
 Log in to Judo's cloud interface, enter Settings, create an Android app if you do not already have one, and add the SHA Certificate Fingerprint.
 
 Then add `android:autoVerify="true"` to any one of your Intent filters. Note that if any one of your configured app links in your entire manifest fails to validate, then none of them will.
-
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="further-reading">
-{% capture text %}
+<section id="further-reading" markdown=1>
 ## Futher Reading
 
 [Android Developer Documentation - Handling Android App Links](https://developer.android.com/training/app-links)
 
 [Android Developer Documentation - Verify Android App Links](https://developer.android.com/training/app-links/verify-site-associations)
-{% endcapture %}
-{{ text | markdownify }}
 </section>

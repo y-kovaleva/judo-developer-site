@@ -5,8 +5,7 @@ platform: Android
 step: 0
 pageSection: "Getting Started"
 ---
-<section id="installation-and-initialization">
-{% capture text %}  
+<section id="{{ page.title | slugify }}" markdown=1>
 # Installation and Initialization
 
 The Judo SDK allows you to present Experiences in your Android mobile app. It supports using push-driven automatic sync in order to ensure that Experiences are available instantly (and when offline).
@@ -18,11 +17,8 @@ You need your app's Judo Access Token (found at the [Judo web interface](https:/
 You will also need a Domain configured in the Judo settings as well. These domains are subdomains within the `.judo.app` top-level domain.
 
 (Note that the SDK requires the `android.permission.INTERNET` permission, naturally enough.)
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="install-the-sdk">
-{% capture text %}
+<section id="install-the-sdk" markdown=1>
 ## Install the SDK
 
 To add the dependency to your project's `build.gradle`. First, add these GitHub repositories as a Maven-format repository:
@@ -67,11 +63,8 @@ dependencies {
 ```
 
 Then, if you are using Android Studio, re-run Gradle Sync.
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="initialize-the-sdk">
-{% capture text %}
+<section id="initialize-the-sdk" markdown=1>
 ## Initialize the SDK
 
 For the next steps you will need your Access Token (discussed above) and an App Domain. Note that Judo supports multiple domains.
@@ -91,11 +84,8 @@ Judo.performSync() {
     Log.d(TAG, "Judo experience sync completed")
 }
 ```
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="troubleshooting">
-{% capture text %}
+<section id="troubleshooting" markdown=1>
 ## Troubleshooting
 
 You can request the Judo SDK will log additional information about its behavior by adding this to your `onCreate`:
@@ -108,14 +98,9 @@ Judo.logLevel = LogLevel.Verbose
 ```
 
 If the `JUDO_VERBOSE` environment variable is set to 1 (you can do so in your Target's Scheme in Xcode), the Judo SDK will log additional information about its behaviour.
-{% endcapture %}
-{{ text | markdownify }}
 </section>
-<section id="getting-help">
-{% capture text %}
+<section id="getting-help" markdown=1>
 ## Getting Help
 
 See the [Judo Forum](https://forum.judo.app/c/sdk-integration).
-{% endcapture %}
-{{ text | markdownify }}
 </section>
