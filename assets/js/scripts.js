@@ -77,8 +77,8 @@ $( document ).ready(function() {
     $(this).toggleClass('is-expanded');
   });
   //add chevron and show children articles in the left sidebar on an active article
-  $('.is-active').closest('.children-cats').css('display', 'block');
-  $('.is-active').closest('.children-cats').prev('.parent-cat').addClass('is-expanded');
+  $('.children-cats').css('display', 'block');
+  $('.children-cats').prev('.parent-cat').addClass('is-expanded');
   //hides/shows left sidebar on mobile
   $('.nav-title').click(function() {
     $(this).next('.nav-container').slideToggle(300);
