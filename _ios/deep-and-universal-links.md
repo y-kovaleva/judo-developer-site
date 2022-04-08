@@ -2,7 +2,7 @@
 layout: page
 title:  "Deep and Universal Links"
 platform: iOS
-step: 1
+step: 2
 pageSection: "Getting Started"
 ---
 <section id="{{page.title | slugify }}" markdown=1>

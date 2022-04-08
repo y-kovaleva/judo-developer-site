@@ -2,7 +2,7 @@
 layout: page
 title:  "Handling Custom Actions"
 platform: iOS
-step: 8
+step: 9
 pageSection: "Customization"
 ---
 

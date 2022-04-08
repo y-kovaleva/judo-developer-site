@@ -2,7 +2,7 @@
 layout: page
 title:  "Sync via iOS Background Fetch"
 platform: iOS
-step: 4
+step: 5
 pageSection: "Getting Started"
 ---
 <section id="{{page.title | slugify }}" markdown=1>
