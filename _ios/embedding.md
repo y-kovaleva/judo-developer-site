@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         if let url = URL(string: "<Your Experience URL>") {
             let experienceVC = ExperienceViewController.init(url: url)
             addChild(experienceVC)
-            experienceVC.view.frame = view.bounds. //Fixed size is required here.
+            experienceVC.view.frame = view.bounds //Fixed size is required here.
             view.addSubview(experienceVC.view)
             experienceVC.didMove(toParent: self)
         }
