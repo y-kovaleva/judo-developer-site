@@ -2,7 +2,7 @@
 layout: page
 title:  "Remote Notification Sync"
 platform: iOS
-step: 4
+step: 3
 pageSection: "Getting Started"
 ---
 <section id="{{page.title | slugify }}" markdown=1>

@@ -2,7 +2,7 @@
 layout: page
 title:  "Sync on Foregrounding"
 platform: iOS
-step: 3
+step: 2
 pageSection: "Getting Started"
 ---
 <section id="{{page.title | slugify }}" markdown=1>

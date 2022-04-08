@@ -1,12 +1,12 @@
 ---
 layout: page
-title:  "Integrating with UIKit"
+title:  "Embedding"
 platform: iOS
-step: 1
-pageSection: "Getting Started"
+step: 9
+pageSection: "Customization"
 ---
 <section id="{{page.title | slugify }}" markdown=1>
-# Integrating with UIKit
+# Embedding
 
 The Judo SDK can also be integrated with UIKit.  Judo experiences are displayed within an `ExperienceViewController`.  The most common method is to simply present the experience view controller on top of the current view controller. The experience can also be embedded within a custom view, typically using view controller containment.
 

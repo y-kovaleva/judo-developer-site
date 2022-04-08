@@ -2,7 +2,7 @@
 layout: page
 title:  "Integrating with Analytics"
 platform: iOS
-step: 7
+step: 6
 pageSection: "Customization"
 ---
 <section id="{{page.title | slugify }}" markdown=1>
