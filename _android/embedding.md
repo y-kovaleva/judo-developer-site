@@ -36,8 +36,7 @@ Judo comes with a handy method for creating intents based on a given experience 
 ```kotlin
 val intent = Judo.makeIntent(
     context = this,
-    url = url,
-    ignoreCache = true
+    url = url
 )
 ```
 
@@ -113,8 +112,7 @@ class ExampleMainActivity : AppCompatActivity() {
         launchButton.setOnClickListener {
             val intent = Judo.makeIntent(
                 context = this,
-                url = url,
-                ignoreCache = true
+                url = url
             )
 
             supportFragmentManager.beginTransaction().add(
