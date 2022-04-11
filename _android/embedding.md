@@ -40,16 +40,15 @@ val intent = Judo.makeIntent(
 )
 ```
 
-Then, using `supportFragmentManager`, we'll pass the intent's extra information into a `Bundle`, so it's accessible to our `Fragment` without going through `ExperienceActivity`.
-
-Note that the naming here is important as the fragment expects the information in `experience-intent`. We don't currently make these `string`s public, which is why using `Judo.makeIntent` is recommended, especially if your experience requires more complex user information and data parameters.
+Then, we'll instantiate our fragment, passing in the intent arguments from above. This fragment will be added via `supportFragmentManager`:
 
 ```kotlin
-supportFragmentManager.beginTransaction().add(
-    R.id.fragment_container_view,
-    ExperienceFragment::class.java,
-    Bundle().apply { putParcelable("experience-intent", intent) }
-).commit()
+val fragment = ExperienceFragment().applyArguments(intent)
+
+supportFragmentManager
+    .beginTransaction()
+    .add(R.id.fragment_container_view_on_example, fragment)
+    .commit()
 ```
 
 Remember to change up the resource id in the code above depending on your own XML and comitting the transaction. As this is a rather simple example, you may prefer to either [commit it in some different way](https://developer.android.com/guide/fragments/transactions) or directly utilize the `fragmentManager.commit { }` helper.
@@ -115,11 +114,12 @@ class ExampleMainActivity : AppCompatActivity() {
                 url = url
             )
 
-            supportFragmentManager.beginTransaction().add(
-                R.id.fragment_container_view_on_example,
-                ExperienceFragment::class.java,
-                Bundle().apply { putParcelable("experience-intent", intent) }
-            ).commit()
+            val fragment = ExperienceFragment().applyArguments(intent)
+
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container_view_on_example, fragment)
+                .commit()
         }
 
         removeButton.setOnClickListener {
