@@ -12,11 +12,15 @@ The Judo SDK can also be embedded into another Android view in order to nest Jud
 
 </section>
 <section id="view-controller-containment" markdown=1>
-## Preparing and Adding the Fragment
+### Preparing and Adding the Fragment
 
-A `Fragment` holding a Judo experience may be embedded within an `Activity` or another `Fragment` by adding `ExperienceFragment` as a child view. There are a number of different ways of going about structuring and adding Fragments. Here we'll be using the `FragmentContainerView` to hold the Judo SDK's `Fragment`, similar to Google's own [AndroidX documentation][add-fragment], and loading the `Fragment` to the currently displayed `AppCompatActivity`.
+A `Fragment` holding a Judo experience may be embedded within an `Activity` or another `Fragment` by adding `ExperienceFragment` as a child view.
 
-When adding the `ExperienceFragment`, keep in mind that it may not auto size its contents in the same way you'd expect the `ExperienceActivity` to, as the `ExperienceFragment`'s children may not participate meaningfully in the overall layout. With that said, correctly sizing up your `Fragment` container should work in most cases.
+There are a number of different ways of going about structuring and adding Fragments. Here we'll be using the `FragmentContainerView` to hold the Judo SDK's `Fragment`, similar to Google's own [AndroidX documentation](https://developer.android.com/guide/fragments/create), and loading the `Fragment` to the currently displayed `AppCompatActivity`.
+
+When adding the `ExperienceFragment`, keep in mind that it may not auto size its contents in the same way you'd expect the `ExperienceActivity` to, as the `ExperienceFragment`'s children may not participate meaningfully in the overall layout.
+
+With that said, correctly sizing up your `Fragment` container should work in most cases.
 
 Inside our `Activity`'s XML:
 
@@ -27,7 +31,7 @@ Inside our `Activity`'s XML:
     android:layout_height="match_parent" />
 ```
 
-Judo comes with a handy method for creating intents based on a given experience url: `Judo.makeIntent`. You can use this to easily populate intents with the relevant experience data:
+Judo comes with a handy method for creating intents based on a given experience url: `Judo.makeIntent`. You can use this to easily populate intents with the relevant experience data inside your `AppCompatActivity`, for example:
 
 ```kotlin
 val intent = Judo.makeIntent(
@@ -37,7 +41,9 @@ val intent = Judo.makeIntent(
 )
 ```
 
-Then, using `supportFragmentManager`, we'll pass the intent's extra information into a `Bundle`, so it's accessible to our `Fragment` without going through `ExperienceActivity`. Note that the naming here is important as the fragment expects the information in `experience-intent`. We don't currently make these `string`s public, which is why using `Judo.makeIntent` is recommended, especially if your experience requires more complex user information and data parameters.
+Then, using `supportFragmentManager`, we'll pass the intent's extra information into a `Bundle`, so it's accessible to our `Fragment` without going through `ExperienceActivity`.
+
+Note that the naming here is important as the fragment expects the information in `experience-intent`. We don't currently make these `string`s public, which is why using `Judo.makeIntent` is recommended, especially if your experience requires more complex user information and data parameters.
 
 ```kotlin
 supportFragmentManager.beginTransaction().add(
