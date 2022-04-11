@@ -47,7 +47,7 @@ val fragment = ExperienceFragment().applyArguments(intent)
 
 supportFragmentManager
     .beginTransaction()
-    .add(R.id.fragment_container_view_on_example, fragment)
+    .add(R.id.fragment_container_view, fragment)
     .commit()
 ```
 
@@ -118,12 +118,12 @@ class ExampleMainActivity : AppCompatActivity() {
 
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_container_view_on_example, fragment)
+                .add(R.id.fragment_container_view, fragment)
                 .commit()
         }
 
         removeButton.setOnClickListener {
-            val fragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view_on_example)
+            val fragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view)
                 ?: TODO()
 
             supportFragmentManager.beginTransaction().remove(fragment).commit()
