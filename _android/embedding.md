@@ -47,19 +47,85 @@ supportFragmentManager.beginTransaction().add(
 ).commit()
 ```
 
-Remember to change up the resource id in the code above depending on your own XML and comitting the transaction. As this is a rather simple example, you may prefer to either [commit it in some different way][fragment-transactions] or directly utilize the `fragmentManager.commit { }` helper.
+Remember to change up the resource id in the code above depending on your own XML and comitting the transaction. As this is a rather simple example, you may prefer to either [commit it in some different way](https://developer.android.com/guide/fragments/transactions) or directly utilize the `fragmentManager.commit { }` helper.
 
 Finally, when done with the experience, you should manually remove the `Fragment` through `supportFragmentManager` as such:
 
 ```kotlin
-val fragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view_on_example) ?: TODO()
+val fragment =
+    supportFragmentManager.findFragmentById(R.id.fragment_container_view) ?: TODO()
 
-supportFragmentManager.beginTransaction().remove(fragment).commit()
+supportFragmentManager
+    .beginTransaction()
+    .remove(fragment)
+    .commit()
 ```
 
 And there you have it! Your `ExperienceFragment` should successfully display its contents.
 
-</section>
+### Sample Code
 
-add-fragment: https://developer.android.com/guide/fragments/create
-fragment-transactions: https://developer.android.com/guide/fragments/transactions
+`activity_example.xml`:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    ...>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/launch_experience_button"
+            android:text="@string/label_launch_experience"
+            ... />
+
+        <Button
+            android:id="@+id/remove_experience_button"
+            android:text="@string/label_remove_experience" 
+            ... />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+`ExampleMainActivity.kt`:
+```kotlin
+class ExampleMainActivity : AppCompatActivity() {
+    ...
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        ...
+
+        launchButton.setOnClickListener {
+            val intent = Judo.makeIntent(
+                context = this,
+                url = url,
+                ignoreCache = true
+            )
+
+            supportFragmentManager.beginTransaction().add(
+                R.id.fragment_container_view_on_example,
+                ExperienceFragment::class.java,
+                Bundle().apply { putParcelable("experience-intent", intent) }
+            ).commit()
+        }
+
+        removeButton.setOnClickListener {
+            val fragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view_on_example)
+                ?: TODO()
+
+            supportFragmentManager.beginTransaction().remove(fragment).commit()
+        }
+
+        ...
+```
+
+</section>
