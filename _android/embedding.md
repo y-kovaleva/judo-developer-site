@@ -18,9 +18,9 @@ A `Fragment` holding a Judo experience may be embedded within an `Activity` or a
 
 There are a number of different ways of going about structuring and adding Fragments. Here we'll be using the `FragmentContainerView` to hold the Judo SDK's `Fragment`, similar to Google's own [AndroidX documentation](https://developer.android.com/guide/fragments/create), and loading the `Fragment` to the currently displayed `AppCompatActivity`.
 
-When adding the `ExperienceFragment`, keep in mind that it may not auto size its contents in the same way you'd expect the `ExperienceActivity` to, as the `ExperienceFragment`'s children may not participate meaningfully in the overall layout.
+When adding the `ExperienceFragment`, keep in mind that it may not auto size its contents in the same way you'd expect the `ExperienceActivity` to, as the `ExperienceFragment`'s children may not participate meaningfully in the overall layout. In some situations, such as using Judo experiences as row or tiles, you might want to set your container's width and height properties to a hardcoded value.
 
-With that said, correctly sizing up your `Fragment` container should work in most cases.
+With that said, using the default options for sizing up your `Fragment` container (such as `match_parent`) should work in most cases.
 
 Inside our `Activity`'s XML:
 
