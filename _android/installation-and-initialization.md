@@ -32,9 +32,6 @@ repositories {
         url 'https://judoapp.github.io/judo-android/sdk/maven'
     }
     maven {
-        url 'https://judoapp.github.io/judo-compose/sdk/maven'
-    }
-    maven {
         url 'https://judoapp.github.io/judo-android-libs/maven'
     }
 }
