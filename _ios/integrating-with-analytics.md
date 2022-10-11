@@ -8,7 +8,7 @@ pageSection: "Customization"
 <section id="{{page.title | slugify }}" markdown=1>
 # Integrating with Analytics
 
-The Judo SDK a notification you can subscribe to, 'Screen Viewed'. This is primarily useful for integrating with your own (or second-party) analytics tooling separate from Judo's own analytics features.
+The Judo SDK offers a notification you can subscribe to, 'Screen Viewed'. This is primarily useful for integrating with your own (or second-party) analytics tooling separate from Judo's own analytics features.
 
 The Judo SDK broadcasts it onto iOS' Notification Center, with references to the SDK's model objects, and also references to the SDK's view controllers.
 
