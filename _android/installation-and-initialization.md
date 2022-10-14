@@ -49,10 +49,7 @@ dependencies {
 repositories {
     // ...
     maven {
-        url = uri("https://judoapp.github.io/judo-android/sdk/maven")
-    }
-    maven {
-        url = uri("https://judoapp.github.io/judo-android-libs/maven")
+        url = uri("https://judoapp.github.io/judo-maven/maven")
     }
 }
 
