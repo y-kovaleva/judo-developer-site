@@ -32,7 +32,7 @@ Add an `<activity>` element to your manifest for `app.judo.sdk.ui.ExperienceActi
 ```xml
 <!-- You'll need to add an Activity element to your manifest for Judo's ExperienceActivity
         (or your own subclass thereof to enable certain customizations) in order to specify the Intent filters -->
-<activity android:name="app.judo.sdk.ui.ExperienceActivity">
+<activity android:name="app.judo.sdk.ui.ExperienceActivity" android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
     <!-- An Example Intent Filter that opens Experience links in Judo's ExperienceActivity -->
     <intent-filter>
         <action android:name="android.intent.action.VIEW" />
