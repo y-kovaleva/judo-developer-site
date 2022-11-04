@@ -38,7 +38,7 @@ repositories {
 
 // Add the following in app-level build.gradle:
 dependencies {
-    implementation 'app.judo:judo-sdk:1.13.4'
+    implementation 'app.judo:judo-sdk:1.8.3'
 }
 ```
 
@@ -55,7 +55,7 @@ repositories {
 
 // Add the following in app-level build.gradle.kts:
 dependencies {
-    implementation("app.judo:judo-sdk:1.13.4")
+    implementation("app.judo:judo-sdk:1.8.3")
 }
 ```
 
