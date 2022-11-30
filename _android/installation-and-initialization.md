@@ -8,7 +8,7 @@ pageSection: "Getting Started"
 <section id="{{ page.title | slugify }}" markdown=1>
 # Installation and Initialization
 
-The Judo SDK allows you to present Experiences in your Android mobile app. It supports using push-driven automatic sync in order to ensure that Experiences are available instantly (and when offline).
+The Judo SDK allows you to present Experiences in your Android mobile app.
 
 While the SDK may be linked with apps that have minimum Android SDK level of 19 (4.4 Kit Kat), Judo content can only be displayed on Android API 23 and greater (6.0 Marshmallow).
 
@@ -38,7 +38,7 @@ repositories {
 
 // Add the following in app-level build.gradle:
 dependencies {
-    implementation 'app.judo:judo-sdk:1.8.3'
+    implementation 'app.judo:judo-sdk:1.8.4'
 }
 ```
 
@@ -55,7 +55,7 @@ repositories {
 
 // Add the following in app-level build.gradle.kts:
 dependencies {
-    implementation("app.judo:judo-sdk:1.8.3")
+    implementation("app.judo:judo-sdk:1.8.4")
 }
 ```
 
@@ -76,10 +76,6 @@ Judo.initialize(
     "<APP-DOMAIN-HERE>"
 )
 
-// Request that Judo perform a sync on start. This is asynchronous, and in the event of no pending updates will consist of only a small, single HTTP request.
-Judo.performSync() {
-    Log.d(TAG, "Judo experience sync completed")
-}
 ```
 </section>
 <section id="troubleshooting" markdown=1>
