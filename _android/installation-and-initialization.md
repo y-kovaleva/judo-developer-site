@@ -29,10 +29,7 @@ To add the dependency to your project's `build.gradle`. First, add these GitHub 
 repositories {
     // ...
     maven {
-        url 'https://judoapp.github.io/judo-android/sdk/maven'
-    }
-    maven {
-        url 'https://judoapp.github.io/judo-android-libs/maven'
+        url 'https://judoapp.github.io/judo-maven/maven'
     }
 }
 
