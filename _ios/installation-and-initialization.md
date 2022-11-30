@@ -9,7 +9,7 @@ pageSection: "Getting Started"
 <section id="{{page.title | slugify }}" markdown=1>
 # Installation and Initialization
 
-The Judo SDK allows you to present Experiences in your iOS mobile app. It supports using push-driven automatic sync in order to ensure that Experiences are available instantly (and when offline).
+The Judo SDK allows you to present Experiences in your iOS mobile app.
 
 While the SDK may be linked with apps that have a target (minimum iOS SDK API level) of iOS 11, Judo content can only be displayed on iOS 13 and greater.
 
@@ -42,7 +42,6 @@ In your AppDelegate's `didFinishLaunchingWithOptions` template method, add the f
 ```swift
 // Initialize the Judo SDK itself.
 Judo.initialize(accessToken: "<ACCESS TOKEN HERE>", domain: "<APP-DOMAIN-HERE>")
-// Request that Judo perform a sync on start. This is asynchronous, and in the event of no pending updates will consist of only a small, single HTTP request.
 ```
 </section>
 <section id="troubleshooting" markdown=1>
